@@ -1,0 +1,31 @@
+{
+  "name": "portafolioweb",
+  "version": "1.0.0",
+  "description": "Mi portafolio en donde mostrare los proyectos realizados.",
+  "keywords": [
+    "portafolio",
+    "web",
+    "proyectos",
+    "desarrollo",
+    "web",
+    "JavaScript",
+    "Firebase",
+    "HTML",
+    "CSS"
+  ],
+  "homepage": "https://github.com/HugoAPG96/portafolio-web#readme",
+  "bugs": {
+    "url": "https://github.com/HugoAPG96/portafolio-web/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoAPG96/portafolio-web.git"
+  },
+  "license": "ISC",
+  "author": "HugoPeralta",
+  "type": "module",
+  "main": "firebase-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
