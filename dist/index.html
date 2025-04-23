@@ -2,44 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio | Hugo Peralta</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
-  <header>
-    <h1>Hugo Peralta</h1>
-    <p>Ingeniero de Sistemas | Desarrollador</p>
+  <header class="encabezado">
+    <div class="contenedor">
+      <h1>Hugo Peralta</h1>
+      <p>Ingeniero de Sistemas | Desarrollador</p>
+      <button id="modoOscuroBtn">🌓 Modo Oscuro</button>
+    </div>
   </header>
 
-  <section>
-    <h2>Sobre mí</h2>
-    <p>Soy estudiante de Ingeniería de Sistemas con experiencia previa en ingeniería agroindustrial, apasionado por el desarrollo de software y las soluciones tecnológicas para problemas reales.</p>
-  </section>
+  <main class="contenedor">
+    <section class="seccion">
+      <h2>Sobre mí</h2>
+      <p>Soy estudiante de Ingeniería de Sistemas con experiencia previa en ingeniería agroindustrial, apasionado por el desarrollo de software y las soluciones tecnológicas para problemas reales.</p>
+    </section>
 
-  <section>
-    <h2>Proyectos Destacados</h2>
-    <div class="proyecto">
-      <h3>API REST para Hostal</h3>
-      <p>Desarrollada en Java con Spring Boot, permite gestionar reservaciones, habitaciones y pagos. Incluye roles de administrador y recepcionista.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Simulador de evacuación sísmica</h3>
-      <p>Proyecto educativo con CodeBlocks que conciencia a los estudiantes sobre las rutas de evacuación.</p>
-    </div>
-  </section>
+    <section class="seccion">
+      <h2>Proyectos en GitHub</h2>
+    
+      <div class="proyecto">
+        <h3>📚 Challenge Literalura</h3>
+        <p>Aplicación en Java que consume la API de Gutendex para explorar libros clásicos. Permite filtrar por idioma, autor y año, además de registrar favoritos. Ideal para practicar consumo de APIs y persistencia con archivos.</p>
+        <a href="https://github.com/HugoAPG96/challenge_literalura" target="_blank" class="btn">🔗 Ver en GitHub</a>
+      </div>
+    
+      <div class="proyecto">
+        <h3>💬 API REST para ForoHub</h3>
+        <p>API REST desarrollada en Spring Boot para un sistema de foros. Soporta creación de temas, usuarios, autenticación con JWT y manejo de errores personalizado. Proyecto ideal para demostrar arquitectura limpia y seguridad en back-end.</p>
+        <a href="https://github.com/HugoAPG96/ChallengeApiRestForoHub" target="_blank" class="btn">🔗 Ver en GitHub</a>
+      </div>
+    
+      <div class="proyecto">
+        <h3>💱 Conversor de Monedas</h3>
+        <p>Aplicación Java de consola que utiliza la API de ExchangeRate para convertir monedas en tiempo real. Incluye historial de conversiones y validación de entrada. Ideal para demostrar manejo de APIs externas y estructuras básicas en Java.</p>
+        <a href="https://github.com/HugoAPG96/ConversorDeMonedas" target="_blank" class="btn">🔗 Ver en GitHub</a>
+      </div>
+    </section>
+    
 
-  <section>
-    <p><span id="contador"></span></p>
-  </section>
+    <section class="seccion">
+      <a href="assets/CV_HugoPG.pdf" download class="btn">
+        📥 Descargar CV
+      </a>
+    </section>
+  </main>
 
-  <footer>
-    &copy; 2025 Hugo Peralta
-  </footer>
+  <!-- Contador oculto -->
+  <span id="contador" style="display: none;"></span>
 
-  <!-- Firebase SDK -->
+  <!-- Scripts -->
   <script type="module" src="./firebase-config.js"></script>
   <script type="module" src="./contador.js"></script>
+  <script>
+    // 🌗 Modo oscuro
+    const btn = document.getElementById('modoOscuroBtn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('oscuro');
+    });
+  </script>
 </body>
 </html>

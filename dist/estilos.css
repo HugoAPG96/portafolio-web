@@ -1,31 +1,78 @@
+:root {
+  --color-fondo: #f9f9f9;
+  --color-texto: #222;
+  --color-primario: #007bff;
+  --color-boton: #007bff;
+  --color-boton-hover: #0056b3;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  header {
-    background-color: #6200ea;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-  }
-  section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-  }
-  .proyecto {
-    background: white;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #eee;
-    font-size: 0.9rem;
-  }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+.encabezado {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.seccion {
+  margin-bottom: 2rem;
+}
+
+.proyecto {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-boton);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-boton-hover);
+}
+
+#modoOscuroBtn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: var(--color-primario);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 🌙 Modo oscuro */
+body.oscuro {
+  --color-fondo: #121212;
+  --color-texto: #eaeaea;
+  --color-primario: #1e88e5;
+  --color-boton: #1e88e5;
+  --color-boton-hover: #1565c0;
+}
+
+body.oscuro .proyecto {
+  background-color: #1f1f1f;
+}
