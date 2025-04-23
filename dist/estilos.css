@@ -118,3 +118,16 @@ body.oscuro .proyecto {
   margin-top: 0.2rem;
   color: var(--texto);
 }
+
+
+@media (max-width: 768px) {
+  .icono {
+    width: 60px;
+  }
+
+  .icono img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
