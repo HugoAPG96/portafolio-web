@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyAAl3mVOQKa0rEesixiftQ4H3TQP_0FXCU",
   authDomain: "portafolio-1110a.firebaseapp.com",
   projectId: "portafolio-1110a",
@@ -15,13 +15,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
-
-const visitasRef = collection(db, "visitas");
-addDoc(visitasRef, {
-  fecha: new Date().toISOString(),
-  navegador: navigator.userAgent
-}).then(() => {
-  console.log("✅ Visita registrada en Firestore");
-}).catch((error) => {
-  console.error("❌ Error al registrar la visita:", error);
-});
